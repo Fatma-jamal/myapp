@@ -1,0 +1,16 @@
+{
+    "name": "contact",
+    "title": "Contact",
+    "description": "This module .....",
+    "dependencies": [],
+    "routes": [
+        {
+            "uri" : "/contact",
+            "method" : "get",
+            "callback" : "showContactPage"
+        }
+    ],
+    "blocks" : [],
+    "models" : [],
+    "controllers" : []
+}

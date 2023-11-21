@@ -1,0 +1,17 @@
+{
+    "type" : "module",
+    "name": "account",
+    "title": "Account",
+    "description": "This module .....",
+    "dependencies": [],
+    "routes": [
+        {
+            "uri" : "/signin",
+            "method" : "get",
+            "callback" : "showSignInPage"
+        }
+    ],
+    "blocks" : [],
+    "models" : [],
+    "controllers" : []
+}
