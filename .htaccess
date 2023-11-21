@@ -7,7 +7,7 @@ RewriteEngine On
 # Allow access to CSS, PNG, JS, and other files from the "assets" folder
 RewriteRule ^assets/ - [L]
 # Allow access to any files in the "uploads" folder
-RewriteRule ^uploads/ - [L]
+RewriteRule ^public/ - [L]
 
 ## Redirect all requests to index.php except for existing files and directories
 #RewriteCond %{REQUEST_FILENAME} !-f

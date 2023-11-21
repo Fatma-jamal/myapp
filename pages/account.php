@@ -9,17 +9,17 @@
                 <!-- -->
                 <div>
                     <label for="formFileLg" class="form-label">Upload</label>
-                    <input class="form-control form-control-lg" id="formFileLg" type="file">
+                    <input name="myphoto" class="form-control form-control-lg" id="formFileLg" type="file">
                 </div>
 
                 <div class="form-check my-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="upload_type" value="public" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1">
                         Public
                     </label>
                 </div>
                 <div class="form-check my-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <input class="form-check-input" type="radio" name="upload_type" value="private" id="flexRadioDefault2" checked>
                     <label class="form-check-label" for="flexRadioDefault2">
                         Private
                     </label>

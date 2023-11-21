@@ -255,25 +255,32 @@ function myAppFormValidate()
     }
 }
 
-function myAppHandleFileUpload($file, $targetDirectory)
+function myAppHandleFileUpload($file, $directory = "", $type = "public")
 {
-    $uploadPath = $targetDirectory . basename($file['name']);
+    $path = BASE_PATH;
+    if($type === "private"){
+        $path .= '/private/';
+    }else{
+        $path .= '/public/';
+    }
+    $path .= $directory ;
+    $uploadPath = $path . basename($file['name']);
 
     // Check if file is a valid upload
     if (!is_uploaded_file($file['tmp_name'])) {
-        return "Invalid file upload.";
+        return false; //"Invalid file upload.";
     }
 
     // Check if the target directory exists, create it if necessary
-    if (!file_exists($targetDirectory)) {
-        mkdir($targetDirectory, 0755, true);
+    if (!file_exists($path)) {
+        mkdir($path, 0755, true);
     }
 
     // Move the uploaded file to the target directory
     if (move_uploaded_file($file['tmp_name'], $uploadPath)) {
-        return "File uploaded successfully.";
+        return true; // "File uploaded successfully.";
     } else {
-        return "File upload failed.";
+        return false; // "File upload failed.";
     }
 }
 
