@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         if (isset($_FILES["myphoto"])) {
             $file = $_FILES["myphoto"];
             // print_r($file); exit;
-            $directory = "";
+            $directory = "sowailem";
             $type = "public";
             if($_POST['upload_type'] === "private"){
                 $type = "private";

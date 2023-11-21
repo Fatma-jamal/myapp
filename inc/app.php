@@ -263,8 +263,9 @@ function myAppHandleFileUpload($file, $directory = "", $type = "public")
     }else{
         $path .= '/public/';
     }
+    // @TODO 
     $path .= $directory ;
-    $uploadPath = $path . basename($file['name']);
+    $uploadPath = $path .'/'. basename($file['name']);
 
     // Check if file is a valid upload
     if (!is_uploaded_file($file['tmp_name'])) {
