@@ -127,11 +127,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         } else {
             // $_SESSION['fields'] = array();
         }
-    } else if ($pageName == "signout") {
-        myAppSignout();
-        // Redirect to /
-        header("Location: " . ROOT_PATH);
-        exit;
     } else if ($pageName == "contact") {
 
         // echo "I am here in contact"; exit;
@@ -154,6 +149,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             myAppHandleFileUpload($file,$directory,$type);
         }
     }
+}
+
+if ($pageName == "signout") {
+    myAppSignout();
+    // Redirect to /
+    header("Location: " . ROOT_PATH);
+    exit;
 }
 
 
