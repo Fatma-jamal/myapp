@@ -2,7 +2,7 @@
 
 namespace Tamm\Core;
 
-class MyAppModule {
+class Module {
 
     public function loadModuleMetadata($module) {
         $file_path = 'modules/' . $module .'/' . $module . '.json';

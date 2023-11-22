@@ -2,7 +2,7 @@
 
 namespace Tamm\Core;
 
-class MyAppFile {
+class File {
 
     public function upload(){}
 

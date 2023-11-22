@@ -2,17 +2,25 @@
 
 // Define a constant
 define('ROOT_PATH', '/myapp/');
-
-use Tamm\Core\MyAppApplication;
+define('BASE_PATH', __DIR__);
 
 require_once('config.php');
 require_once('core/application.php');
 
-$instance = new MyAppApplication($config);
+use Tamm\Core\Application;
 
-$modules = $instance->loadModulesMetadata();
+$app = Application::getInstance($config);
 
-echo "<pre>";
-print_r($modules);
-echo "</pre>";
+// $container = $app->getContainer();
+
+$app->run();
+
+// $request = $container->get('Tamm\Core\HttpRequest');
+//
+// $response->send();
+// //
+// echo '<pre>';
+// var_dump($request);
+// echo '</pre>';
+
 
